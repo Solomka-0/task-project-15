@@ -1,66 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Проект: Интерактивное веб-приложение с использованием Livewire и Alpine.js
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Технологии**:
+- [Laravel Livewire](https://laravel-livewire.com/) (для реактивности на стороне сервера)
+- [Alpine.js](https://alpinejs.dev/) (для клиентской реактивности)
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Примеры реализации
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. Многошаговая форма (`/multi-step-form`)
+**Функционал**:
+- Последовательный переход между шагами
+- Валидация данных
+- Сохранение в БД
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Ссылки на код**:
+- Компонент Livewire: [`app/Http/Livewire/MultiStepForm.php`](https://github.com/Solomka-0/task-project-15/blob/main/app/Livewire/MultiStepForm.php)
+- Шаблон Blade: [`resources/views/livewire/multi-step-form.blade.php`](https://github.com/Solomka-0/task-project-15/blob/main/resources/views/livewire/multi-step-form.blade.php)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. Управление задачами (`/tasks`)
+**Функционал**:
+- CRUD для задач
+- Фильтрация и сортировка
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Ссылки на код**:
+- Компонент Livewire: [`app/Http/Livewire/TaskManager.php`](https://github.com/Solomka-0/task-project-15/blob/main/app/Livewire/TaskManager.php)
+- Компонент Blade: [`resources/views/components/task-modal.blade.php`](https://github.com/Solomka-0/task-project-15/blob/main/resources/views/livewire/task-manager.blade.php)
+- Эндпоинты: [`routes/api.php`](https://github.com/Solomka-0/task-project-15/blob/main/routes/web.php#L45-L62)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+### 3. Регистрация (`/registration`)
+**Функционал**:
+- Валидация формы
+- Отправка подтверждения по email
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+**Ссылки на код**:
+- Livewire-компонент: [`app/Http/Livewire/RegisterForm.php`](https://github.com/Solomka-0/task-project-15/blob/main/app/Livewire/RegisterForm.php)
+- Email-шаблон: [`resources/views/livewire/confirmation.blade.php`](https://github.com/Solomka-0/task-project-15/blob/main/resources/views/livewire/register-form.blade.php)
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 4. Управление пользователями (`/users`)
+**Функционал**:
+- Редактирование ролей
+- Блокировка пользователей
 
-## Contributing
+**Ссылки на код**:
+- Таблица с пользователями (Livewire): [`app/Http/Livewire/UserTable.php`](https://github.com/Solomka-0/task-project-15/blob/main/app/Livewire/UserTable.php)
+- Blade-шаблон: [`resources/views/livewire/register-form.blade.php`](https://github.com/Solomka-0/task-project-15/blob/main/resources/views/livewire/register-form.blade.php)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+### 5. Уведомления (`/notifications`)
+**Функционал**:
+- Real-time обновления
+- Счётчик непрочитанных
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**Ссылки на код**:
+- Компонент Livewire: [`app/Http/Livewire/Notifications.php`](https://github.com/Solomka-0/task-project-15/blob/main/app/Livewire/Notifications.php)
+- Blade-шаблон: [`resources/views/livewire/notifications.blade.php`](https://github.com/Solomka-0/task-project-15/blob/main/resources/views/livewire/notifications.blade.php)
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Итоговые навыки
+✅ **Full-stack реактивность**: синхронизация Livewire (сервер) + Alpine.js (клиент)  
+✅ **Работа с WebSockets**: интеграция Pusher и Laravel Echo  
+✅ **Безопасность**: ролевая модель, хеширование паролей  
+✅ **Оптимизация UX**: динамические формы, модальные окна, real-time элементы
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[Ссылка на полный исходный код](https://github.com/Solomka-0/task-project-15/blob/main)
