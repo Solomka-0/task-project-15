@@ -39,7 +39,7 @@
 
 **Ссылки на код**:
 - Livewire-компонент: [`app/Http/Livewire/RegisterForm.php`](https://github.com/Solomka-0/task-project-15/blob/main/app/Livewire/RegisterForm.php)
-- Email-шаблон: [`resources/views/livewire/confirmation.blade.php`](https://github.com/Solomka-0/task-project-15/blob/main/resources/views/livewire/register-form.blade.php)
+- Email-шаблон: [`resources/views/livewire/register.blade.php`](https://github.com/Solomka-0/task-project-15/blob/main/resources/views/livewire/register-form.blade.php)
 
 ---
 
